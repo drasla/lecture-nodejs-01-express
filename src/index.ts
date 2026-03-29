@@ -1,6 +1,7 @@
 import express, { type Request, type Response } from "express";
 import dotenv from "dotenv";
-import postRouter from "./routes/postRouter.js";
+import postRouter from "./routes/postRouter";
+import userRouter from "./routes/userRouter";
 
 // 1. 환경 변수 초기화
 dotenv.config();
@@ -18,7 +19,7 @@ app.get("/", (req: Request, res: Response) => {
     res.send("🚀 Express 서버가 정상적으로 실행 중입니다!");
 });
 app.use("/posts", postRouter);
-
+app.use("/users", userRouter);
 // 5. 서버 실행
 app.listen(PORT, () => {
     console.log(`🛡️ Server listening on port: http://localhost:${PORT} 🛡️`);
