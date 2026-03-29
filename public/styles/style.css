@@ -1,0 +1,145 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Pretendard', 'Malgun Gothic', sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* 🌟 공통 카드 스타일 (로그인 & 결과창 모두 사용) */
+.container {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    text-align: center; /* 결과창을 위해 기본 가운데 정렬 */
+}
+
+/* ================================
+   로그인 페이지 전용 스타일
+================================ */
+.login-container h2 {
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.subtitle {
+    color: #e74c3c;
+    font-size: 13px;
+    margin-bottom: 25px;
+    font-weight: bold;
+}
+
+.input-group {
+    margin-bottom: 20px;
+    text-align: left; /* 라벨과 인풋은 좌측 정렬로 덮어쓰기 */
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+    font-weight: bold;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 14px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-btn:hover {
+    background-color: #2980b9;
+}
+
+/* ================================
+   결과 페이지 전용 스타일
+================================ */
+.success-container h1 {
+    color: #2ecc71;
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.success-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.home-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.home-link:hover {
+    background-color: #555;
+}
+
+/* ================================
+   실패 페이지 전용 스타일 (추가)
+================================ */
+.fail-container h1 {
+    color: #e74c3c; /* 경고를 나타내는 빨간색 */
+    margin-bottom: 15px;
+    font-size: 24px;
+}
+
+.fail-container p {
+    color: #555;
+    font-size: 16px;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.retry-link {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #e74c3c; /* 버튼도 빨간색으로 통일 */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.retry-link:hover {
+    background-color: #c0392b;
+}
