@@ -7,7 +7,7 @@ const mockUsers = [
     { id: 2, email: "user@test.com", password: "1234", name: "일반유저" },
 ];
 
-router.post("/login", (req, res) => {
+router.get("/login", (req, res) => {
     // 1. 요청 데이터 추출
     // 2. 요청 데이터 유효성 검사
     // 3. mockUsers 중 입력된 email을 가진 계정이 있는지 검색
