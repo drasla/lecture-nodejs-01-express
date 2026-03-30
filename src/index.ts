@@ -9,11 +9,15 @@ dotenv.config();
 
 // 2. Express 앱 생성
 const app = express();
-const PORT = process.env.PORT || 8000;
+const PORT = process.env.PORT || 8001;
 
 // 3. 필수 미들웨어
 // JSON 형태의 데이터를 주고받기 위해 꼭 필요합니다.
 app.use(express.json());
+
+// 2. 🌟 순수 HTML Form 태그에서 POST로 보내는 데이터를 해독 (req.body)
+// extended: true를 하면 데이터를 더 풍부하게 해석해줍니다.
+app.use(express.urlencoded({ extended: true }));
 
 // 4. 정적 파일 제공할 폴더 지정
 app.use(express.static(path.join(process.cwd(), "public")));
